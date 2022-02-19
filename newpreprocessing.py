@@ -20,7 +20,4 @@ def newpreprocessing(img):
     # opening
     kernel = np.ones((13,13),np.uint8)
     opening = cv2.morphologyEx(thresh1, cv2.MORPH_OPEN, kernel)
-    # dilatacao
-    kernel_dl = np.ones((3,3),np.uint8)
-    dilation = cv2.dilate(opening,kernel_dl,iterations = 1)
-    return dilation
+    return opening
